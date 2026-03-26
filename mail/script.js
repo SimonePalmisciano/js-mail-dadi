@@ -2,7 +2,7 @@
 
 // lista di email di invitati alla festa PIù BELLA DI OGGI
 
-let listaMail = [
+const listaMail = [
     'gigi.buffon@juve.com',
     'alex.delpiero@juve.com',
     'pavel.nedved@juve.com',
@@ -22,25 +22,37 @@ let mailUtente = prompt('inserisci la tua mail').toLowerCase();
 
 console.log(mailUtente);
 
+// controllo se la mail inserita dall'utente
+// rispetti i canoni di una mail
+
 while (!mailUtente.includes('@') && !mailUtente.includes('.') ) {
     mailUtente = prompt('ERRORE, inserisci una mail corretta','INSERISCI MAIL CORRETTA')
 }
 
+let trovata = false;
 
 for (let z = 0; z < listaMail.length; z++) {
 
-    let element = listaMail[z];
+    let element = listaMail[z]; //la variabile element avrà come valore stringa con 
+                                // una lista di tutte le mail del'array
     
     if (mailUtente === element) {
-            console.log('MAIL GIUSTA')
-            
-    } else {
-        console.error('FUORI DI QUI NON TI PERMETTERE AD ENTRARE');
-        
+        trovata = true; // qui trova la mail giusta
+        // break; 
     }
-
-
 }
+
+if (trovata) {
+    console.log('MAIL GIUSTA')
+            
+} else {
+    console.error('FUORI DI QUI NON TI PERMETTERE AD ENTRARE');
+        
+}
+
+
+// ALTRO METODO PER TROVARE NELL'ARRAY LA MAIL GIUSTA
+
 
 // let mailTrovata = listaMail.some(mail => mail.toLowerCase() === mailUtente);
 
