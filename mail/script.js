@@ -26,12 +26,28 @@ while (!mailUtente.includes('@') && !mailUtente.includes('.') ) {
     mailUtente = prompt('ERRORE, inserisci una mail corretta','INSERISCI MAIL CORRETTA')
 }
 
-let mailTrovata = listaMail.some(mail => mail.toLowerCase() === mailUtente);
 
-if (mailTrovata) {
-    console.log('COMPLIMENTI puoi entrare alla festa');
+for (let z = 0; z < listaMail.length; z++) {
+
+    let element = listaMail[z];
     
-} else {
-    console.error('non puoi entrareee');
-    
+    if (mailUtente === element) {
+            console.log('MAIL GIUSTA')
+            
+    } else {
+        console.error('FUORI DI QUI NON TI PERMETTERE AD ENTRARE');
+        
+    }
+
+
 }
+
+// let mailTrovata = listaMail.some(mail => mail.toLowerCase() === mailUtente);
+
+// if (mailTrovata) {
+//     console.log('COMPLIMENTI puoi entrare alla festa');
+    
+// } else {
+//     console.error('non puoi entrareee');
+    
+// }
