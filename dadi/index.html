@@ -8,22 +8,29 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Una battaglia all'ultimo sangue di numeri casuali</h1>
+    <header class="text-center">
+        <h1>Una battaglia all'ultimo sangue di numeri casuali</h1>
+    </header>
 
-    <div class="counter-container">
+    <div class="counter-container text-center mt-2">
         <div class="giocatore-counter">
-            <p id="numeroGiocatore">
+            <p id="numeroGiocatore" class="counter border-rad-1">
 
             </p>
         </div>
         <div class="computer-counter">
-            <p id="numeroComputer">
+            <p id="numeroComputer" class="counter border-rad-1">
 
             </p>
         </div>
         <p id="vincitore">
 
         </p>
+    </div>
+    <div class="btn-container text-center mt-2">
+        <button id="btnRicarica">
+            Riprova
+        </button>
     </div>
 
     <script src="./script.js"></script>

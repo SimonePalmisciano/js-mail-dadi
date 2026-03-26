@@ -31,3 +31,7 @@ if (numeroGiocatore > numeroComputer) {
     document.getElementById('vincitore').innerHTML = patta;
     
 }
+
+document.getElementById('btnRicarica').addEventListener("click", function() {
+    location.reload();
+});
