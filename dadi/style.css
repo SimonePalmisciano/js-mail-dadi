@@ -37,28 +37,66 @@ a {
     border-radius: 10px;
 }
 
+.d-inline-block {
+    display: inline-block;
+}
+
+.d-flex {
+    display: flex;
+}
+
 /************************
         MAIN
 ************************/
 
 
-p.counter {
-    font-size: 36px;
-    background-color: beige;
-    padding: 10px;
-    height: 60px;
-    width: 60px;
-    display: inline-block;
-    margin: 5px;
+.counter-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 600px;
 }
 
-#vincitore {
+.btn-container {
+    width: 600px;
+}
+
+.giocatore-counter,
+.computer-counter {
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+}
+
+.name-container {
+    width: 100%;
+    font-size: 20px;
+    background-color: beige;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.name-container p.counter {
+    font-size: 36px;
+}
+
+.counter {
+    width: 20%;
+}
+
+.name-container p {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result {
     font-size: 36px;
     background-color: rgba(44, 250, 253, 0.407);
-    width: 450px;
-    display: inline-block;
-    padding: 10px;
-    margin-top: 20px;
+    padding: 10px 100px;
 }
 
 button {

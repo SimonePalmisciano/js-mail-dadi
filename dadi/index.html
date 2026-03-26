@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,32 +8,52 @@
 
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <header class="text-center">
         <h1>Una battaglia all'ultimo sangue di numeri casuali</h1>
     </header>
 
-    <div class="counter-container text-center mt-2">
-        <div class="giocatore-counter">
-            <p id="numeroGiocatore" class="counter border-rad-1">
+    <main>
+        <div class="counter-container text-center mt-2 d-flex">
+            <div class="giocatore-counter d-flex">
+                <div class="name-container border-rad-1 d-flex">
+                    <p class="name-giocatore">
+                        GIOCATORE
+                    </p>
+                </div>
+                <div class="name-container counter border-rad-1 d-flex">
+                    <p id="numeroGiocatore" class="counter">
 
-            </p>
+                    </p>
+                </div>
+            </div>
+            <div class="computer-counter d-flex">
+                <div class="name-container border-rad-1 d-flex">
+                    <p class="name-computer">
+                        COMPUTER
+                    </p>
+                </div>
+                <div class="name-container counter border-rad-1 d-flex">
+                    <p id="numeroComputer" class="counter">
+
+                    </p>
+                </div>
+            </div>
+            <div class="result border-rad-1">
+                <p id="vincitore" class="">
+
+                </p>
+            </div>
         </div>
-        <div class="computer-counter">
-            <p id="numeroComputer" class="counter border-rad-1">
-
-            </p>
+        <div class="btn-container text-center mt-2">
+            <button id="btnRicarica">
+                Riprova
+            </button>
         </div>
-        <p id="vincitore">
-
-        </p>
-    </div>
-    <div class="btn-container text-center mt-2">
-        <button id="btnRicarica">
-            Riprova
-        </button>
-    </div>
+    </main>
 
     <script src="./script.js"></script>
 </body>
+
 </html>
