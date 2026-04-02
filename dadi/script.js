@@ -10,8 +10,9 @@ numeroGiocatore = Math.floor(Math.random() * 10 + 1);
 
 numeroComputer = Math.floor(Math.random() * 10 + 1);
 
-document.getElementById('numeroGiocatore').innerHTML = numeroGiocatore;
-document.getElementById('numeroComputer').innerHTML = numeroComputer;
+// meglio utilizzare querySelector invece di 'getElementById'
+document.querySelector('#numeroGiocatore').innerHTML = numeroGiocatore;
+document.querySelector('#numeroComputer').innerHTML = numeroComputer;
 
 
 console.log(numeroGiocatore);
@@ -19,19 +20,30 @@ console.log(numeroComputer);
 
 if (numeroGiocatore > numeroComputer) {
     let giocatoreVincitore = 'GIOCATORE VINCE!!!';
-    document.getElementById('vincitore').innerHTML = giocatoreVincitore;
+    document.querySelector('#vincitore').innerHTML = giocatoreVincitore;
 
     
 } else if (numeroComputer > numeroGiocatore) {
     let computerVincitore = 'COMPUTER VINCE!!!';
-    document.getElementById('vincitore').innerHTML = computerVincitore;
+    document.querySelector('#vincitore').innerHTML = computerVincitore;
     
 } else {
     let patta = 'PATTA';
-    document.getElementById('vincitore').innerHTML = patta;
+    document.querySelector('#vincitore').innerHTML = patta;
     
 }
 
-document.getElementById('btnRicarica').addEventListener("click", function() {
+
+// METODOLOGIA MIGLIORE
+
+function clickButtonReloadHandler (){
+    // console.log('aggiorna la pagina');
     location.reload();
-});
+}
+
+document.querySelector('#btnRicarica').addEventListener("click", clickButtonHandler);
+
+// METODOLOGIA VECCHIA E POCO UTILIZZATA, MENO VANTAGGIOSA
+// document.getElementById('btnRicarica').addEventListener("click", function() {
+//     location.reload();
+// });

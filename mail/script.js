@@ -33,8 +33,7 @@ let trovata = false;
 
 for (let z = 0; z < listaMail.length; z++) {
 
-    let element = listaMail[z]; //la variabile element avrà come valore stringa con 
-                                // una lista di tutte le mail del'array
+    let element = listaMail[z]; 
     
     if (mailUtente === element) {
         trovata = true; // qui trova la mail giusta
